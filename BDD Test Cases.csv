@@ -1,0 +1,22 @@
+Positive Test Case:,,,,
+,,,,
+Scenario,Given,When,And,Then
+"Compose and send an email with subject ""Incubyte"" and body ""QA test for Incubyte""",I am logged into my Gmail account,"I click the ""Compose"" button","I enter ""recipient@example.com"" in the ""To"" field, ""Incubyte"" in the ""Subject"" field, and ""QA test for Incubyte"" in the email body","The email should be sent successfully, and I should see a confirmation message"
+,,,,
+,,,,
+Negative Test Case 1: Empty 'To' Field,,,,
+,,,,
+Scenario,Given,When,And,Then
+Fail to send an email when the 'To' field is empty,I am logged into my Gmail account,"I click the ""Compose"" button","I leave the ""To"" field empty, enter ""Incubyte"" in the ""Subject"" field, and ""QA test for Incubyte"" in the email body","The email should not be sent, and I should see an error indicating that the ""To"" field is required"
+,,,,
+,,,,
+Negative Test Case 2: Empty 'Subject' Field,,,,
+,,,,
+Scenario,Given,When,And,Then
+Fail to send an email when the 'Subject' field is empty,I am logged into my Gmail account,"I click the ""Compose"" button","I enter ""recipient@example.com"" in the ""To"" field, leave the ""Subject"" field empty, and ""QA test for Incubyte"" in the email body","The email should not be sent, and I should see an error indicating that the ""Subject"" field is required"
+,,,,
+,,,,
+Negative Test Case 3: Empty Email Body,,,,
+,,,,
+Scenario,Given,When,And,Then
+Fail to send an email when the email body is empty,I am logged into my Gmail account,"I click the ""Compose"" button","I enter ""recipient@example.com"" in the ""To"" field, ""Incubyte"" in the ""Subject"" field, and leave the email body empty","The email should not be sent, and I should see an error indicating that the email body is required"
